@@ -1,1 +1,1 @@
-Bulls and Cows game
+<span style='color:red'>Bulls</span> and Cows game
