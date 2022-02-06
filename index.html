@@ -12,12 +12,21 @@
     <div class="container">
 
         <h3>Bulls and Cows game</h3>
-        <p>Descritpion: the game</p>
-        <div class="row col-4">
-            <label for="num">Проверить число</label>
-            <input type="text" class="form-control" id="num">
-            <button class="btn btn-info" id="btn">проверить число</button>
+        <p>Game description: the game</p>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="num">Проверить число</label>
+                <input type="text" class="form-control" id="num">
+                <button class="btn btn-info" id="btn">проверить число</button>
+            </div>
+    
+            <div class="col-md-4">
+               <div>Secret Number</div>
+               <span id="secret">****</span>
+               <button class="btn btn-danger" id="showSecret">SHOW</button>
+            </div>
         </div>
+        
         
     </div>
     <script src="app.js"></script>
