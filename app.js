@@ -1,4 +1,5 @@
 let num = document.querySelector('#num');
+let resultBloc = document.querySelector('#result');
 let btn = document.querySelector('#btn');
 let showSecret = document.querySelector('#showSecret');
 let secret = document.querySelector('#secret');
@@ -6,19 +7,33 @@ let secret = document.querySelector('#secret');
 let secretNum = secretNumGenerate();
 
 btn.addEventListener('click', function() {
-    
+    result = [];
     if (checkNumCount(num.value)) {
 
+        for (let i = 0; i < num.value.length; i++) {
+
+            if (Number(num.value[i]) == Number(secretNum[i])) {
+                result.push('BULL!');
+            } else { 
+
+            }
+        }
+
+        result.forEach( item =>  console.log(item))         
+           
+            // let block = document.createElement('div').classList.add('bull');
+        
+        resultBloc.innerHTML = result;
     }
 })
 
 
 function checkNumCount(num) {
     if (Array.from(num).length === 4) {
-        console.log('Все верно');
+        // console.log('Все верно');
         return true;
     } else {
-        console.log('ввели меньше!');
+        // console.log('ввели меньше!');
         return false;
     }
 }
@@ -33,13 +48,12 @@ function secretNumGenerate(secretNumLength = 4) {
             i++;
         }
     }
-
-    let num = result.join('');
-
-    return num;
+    
+    // let num = result.join('');
+    return result;
 }
 
 
 showSecret.addEventListener('click', function () {
-    secret.innerHTML = secretNum;
+    secret.innerHTML = secretNum.join('');
 })
