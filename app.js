@@ -7,23 +7,34 @@ let secret = document.querySelector('#secret');
 let secretNum = secretNumGenerate();
 
 btn.addEventListener('click', function() {
+    resultBloc.innerHTML = '';
     result = [];
     if (checkNumCount(num.value)) {
 
         for (let i = 0; i < num.value.length; i++) {
 
             if (Number(num.value[i]) == Number(secretNum[i])) {
-                result.push('BULL!');
-            } else { 
-
+                result.push('Bull');
+            } else if (secretNum.includes(Number(num.value[i]))) { 
+                result.push('Cow');
             }
         }
-
-        result.forEach( item =>  console.log(item))         
-           
-            // let block = document.createElement('div').classList.add('bull');
         
-        resultBloc.innerHTML = result;
+
+    }
+    console.log(result)
+    for (let i = 0; i < result.length; i++ ) {
+        if (result[i] == 'Bull') {
+            let block = document.createElement('span');
+            block.classList.add('bull');
+            block.innerHTML = 'Bull! ';
+            resultBloc.append(block);
+        } else if (result[i] == 'Cow'){
+            let block = document.createElement('span');
+            block.classList.add('cow');
+            block.innerHTML = 'Cow! ';
+            resultBloc.append(block);
+        }
     }
 })
 
