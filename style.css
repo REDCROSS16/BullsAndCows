@@ -3,10 +3,12 @@
     height: 24px;
     background-image: url('images/bulls.png');
     background-repeat: no-repeat;
+    display: inline-block;
 }
 .cow {
     width: 24px;
     height: 24px;
     background-image: url('images/cow.png');
     background-repeat: no-repeat;
+    display: inline-block;
 }

@@ -22,18 +22,24 @@ btn.addEventListener('click', function() {
         
 
     }
-    console.log(result)
     for (let i = 0; i < result.length; i++ ) {
         if (result[i] == 'Bull') {
-            let block = document.createElement('span');
+            let block = document.createElement('div');
             block.classList.add('bull');
-            block.innerHTML = 'Bull! ';
+            // block.innerHTML = ' ';
             resultBloc.append(block);
         } else if (result[i] == 'Cow'){
-            let block = document.createElement('span');
+            let block = document.createElement('div');
             block.classList.add('cow');
-            block.innerHTML = 'Cow! ';
+            // block.innerHTML = ' 1';
             resultBloc.append(block);
+        }
+    }
+
+    if (result.every(item => item == 'Bull')) {
+        alert('You Won!')
+        if (confirm('Restart game?')) {
+            location.reload();
         }
     }
 })
