@@ -17,6 +17,8 @@ btn.addEventListener('click', function() {
                 result.push('Bull');
             } else if (secretNum.includes(Number(num.value[i]))) { 
                 result.push('Cow');
+            } else {
+                result.push(null)
             }
         }
         
@@ -74,3 +76,6 @@ function secretNumGenerate(secretNumLength = 4) {
 showSecret.addEventListener('click', function () {
     secret.innerHTML = secretNum.join('');
 })
+
+
+//TODO: ИСТОРИЮ 
