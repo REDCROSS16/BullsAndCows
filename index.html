@@ -9,40 +9,65 @@
     <title>Bulls and Cows</title>
 </head>
 <body>
-    <div class="container">
-        <div class="col-md-12 m-5">
-            <h3>Bulls and Cows game</h3>
-            <p>Game description:</p> 
-            <p>RU Угадайте загаданные цифры, если вы угадали цифру которая была на своем место, то это "Бык", если вы угадали цифру, которая есть в загаданном числе, то это "Корова"</p>
-            <p>EN Guess the hidden numbers, if you guessed the number that was in its place, then it is "Bull", if you guessed the number that is in the hidden number, then it is "Cow"</p>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-4">
-                <label for="num">Проверить число</label>
-                <input type="text" class="form-control" id="num" placeholder="Введите число из неповторяющихся цифр!">
-                <button class="btn btn-info" id="btn">проверить число</button>
+
+
+     <!-- Определенный экран 0 -->
+     <div class="screen">
+        <h1>Bulls and Cow game</h1>
+        <button href="#" class="start" id="start">Начать игру</button>
+      </div>
+
+      <!-- Определенный экран 1 -->
+    <div class="screen">
+        <div class="container">
+            <div class="col-md-12 m-5">
+                <h3>Bulls and Cows game</h3>
+                <button type="button" class="btn btn-light text-left" id="description">Game description</button>
+                <p class="description hidden">RU Угадайте загаданные цифры, если вы угадали цифру которая была на своем место, то это "Бык", если вы угадали цифру, которая есть в загаданном числе, то это "Корова"</p>
+                <p class="description hidden">EN Guess the hidden numbers, if you guessed the number that was in its place, then it is "Bull", if you guessed the number that is in the hidden number, then it is "Cow"</p>
             </div>
-    
-            <div class="col-md-4 d-flex justify-content-end">
-               
-               <div class="col-3 bg-light p-3 border">
-                <button class="btn btn-danger" id="showSecret">Show Secret Number</button>
-              </div>
-              <div class="col-sm-9 bg-light p-3 border">
-                <div class="row hidden"><div id="secret"> **** </div></div>
+
+
+            <div class="row">
+                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button">Проверить число</button>
+                </div>
               </div>
 
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div id="result"></div>
-            </div>
-        </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="num">Проверить число</label>
+                    <input type="text" class="form-control" id="num" placeholder="Введите число из неповторяющихся цифр!">
+                    <button class="btn btn-outline-info" id="btn">проверить число</button>
+                </div>
         
-        
-    </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="result"></div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- <div class="col-md-4 d-flex justify-content-end">
+                   
+            <div class="col-3 bg-light p-3 border">
+             <button class="btn btn-danger" id="showSecret">Show Secret Number</button>
+           </div>
+           <div class="col-sm-9 bg-light p-3 border">
+             <div class="row hidden"><div id="secret"> **** </div></div>
+           </div>
+
+         </div> -->
+      </div>
+
+      
+
+   
     <script src="app.js"></script>
 </body>
 </html>

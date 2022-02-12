@@ -1,3 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #fff;
+    font-family: 'Khula', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+}
+  
+
 .bull {
     width: 24px;
     height: 24px;
@@ -11,4 +25,32 @@
     background-image: url('images/cow.png');
     background-repeat: no-repeat;
     display: inline-block;
+}
+
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    transition: margin 0.5s ease-out;
+    background: linear-gradient(90deg, #486d97 0%, #3b6897 100%);
+}
+
+.screen.up {
+margin-top: -100vh;
+}
+
+
+h1 {
+    color: white;
+}
+
+.description {
+    text-align: left;
+}
+.hidden {
+    display: none;
 }
