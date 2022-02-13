@@ -54,3 +54,8 @@ h1 {
 .hidden {
     display: none;
 }
+.hist {
+    margin: 0 5px;
+    font-weight: 700;
+    font-size: 30px;
+}

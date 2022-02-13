@@ -7,19 +7,20 @@ let startBtn = document.querySelector('#start');
 let screens = document.querySelectorAll('.screen');
 let secretNum = secretNumGenerate();
 let descriptions = document.querySelectorAll('.description');
+const historyBlock = document.querySelector('#history');
 
-
-
+console.log(secretNum)
 startBtn.addEventListener('click', (event) => {
     event.preventDefault();
     screens[0].classList.add('up');
-})
 
+})
 
 
 btn.addEventListener('click', function() {
     resultBloc.innerHTML = '';
     result = [];
+    let hist = document.createElement('div');
     if (checkNumCount(num.value)) {
 
         for (let i = 0; i < num.value.length; i++) {
@@ -32,22 +33,36 @@ btn.addEventListener('click', function() {
                 result.push(null)
             }
         }
-        
-
     }
+    let final = [];
     for (let i = 0; i < result.length; i++ ) {
+        
         if (result[i] == 'Bull') {
             let block = document.createElement('div');
             block.classList.add('bull');
             resultBloc.append(block);
+            hist.append(block);
+
         } else if (result[i] == 'Cow'){
             let block = document.createElement('div');
             block.classList.add('cow');
             resultBloc.append(block);
+            hist.append(block);
+
         }
     }
 
-    if (result.every(item => item == 'Bull')) {
+    const histSpan = document.createElement('span');
+    histSpan.classList.add('hist');
+    histSpan.innerHTML = num.value;
+    hist.append(histSpan);
+    historyBlock.append(hist);
+    
+    function isBull(element, index, array) {
+        return element == 'Bull';
+      }
+
+    if (result.every(isBull)) {
         alert('You Won!')
         if (confirm('Restart game?')) {
             location.reload();
@@ -57,6 +72,7 @@ btn.addEventListener('click', function() {
 
 
 function checkNumCount(num) {
+    console.log(num)
     if (Array.from(num).length === 4) {
         // console.log('Все верно');
         return true;

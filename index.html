@@ -29,40 +29,41 @@
 
 
             <div class="row">
-                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-outline-secondary" type="button">Проверить число</button>
+                <div class="col-md-8">
+                    <h4>Action block</h4>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control"  id="num" placeholder="Введите число из неповторяющихся цифр!">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary btn-outline-info" type="button" id="btn">Проверить число</button>
+                        </div>
+                      </div>
                 </div>
+
+                <div class="col-md-4">
+                    <h4>History block</h4>
+                    <div id="history">
+                    <!-- <div>cow</div> + число -->
+                    </div>
+                </div>
+                
               </div>
 
-            
-            <div class="row">
-                <div class="col-md-4">
-                    <label for="num">Проверить число</label>
-                    <input type="text" class="form-control" id="num" placeholder="Введите число из неповторяющихся цифр!">
-                    <button class="btn btn-outline-info" id="btn">проверить число</button>
-                </div>
-        
-                
-            </div>
             <div class="row">
                 <div class="col-md-12">
                     <div id="result"></div>
                 </div>
             </div>
+
+            <div class="position-absolute top-100 start-50 translate-middle hidden">
+                <div class="secret-block">
+                    <div id="showSecret"></div>
+                    <div id="secret"> **** </div>
+                </div>
+                
+            </div>
+
             
         </div>
-
-        <!-- <div class="col-md-4 d-flex justify-content-end">
-                   
-            <div class="col-3 bg-light p-3 border">
-             <button class="btn btn-danger" id="showSecret">Show Secret Number</button>
-           </div>
-           <div class="col-sm-9 bg-light p-3 border">
-             <div class="row hidden"><div id="secret"> **** </div></div>
-           </div>
-
-         </div> -->
       </div>
 
       
