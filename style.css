@@ -26,6 +26,10 @@ body {
     background-repeat: no-repeat;
     display: inline-block;
 }
+.space {
+    width: 24px;
+    height: 24px;
+}
 
 
 .screen {
@@ -58,4 +62,9 @@ h1 {
     margin: 0 5px;
     font-weight: 700;
     font-size: 30px;
+}
+
+#history {
+    height: 40vh;
+    overflow: auto;
 }
